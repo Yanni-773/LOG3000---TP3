@@ -47,12 +47,15 @@ def multiply(a,b):
         b : Deuxième nombre
 
     Returns:
-        Le résultat de l'opération
+        Le résultat de la multiplication
+        Si l'un des nombres est 0, retourne 0
 
     Examples:
         multiply(4, 3) = 12
+        multiply(5, 0) = 0
+        multiply(0, 5) = 0
     """
-    return a ** b
+    return a * b
 
 def divide(a, b):
     """

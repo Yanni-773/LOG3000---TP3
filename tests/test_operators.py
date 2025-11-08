@@ -142,7 +142,7 @@ def test_edge_cases():
     assert multiply(0, 5) == 0, "Multiplication par zéro à gauche"
     
     # Tests de division par zéro
-    with pytest.raises(ZeroDivisionError, message="La division par zéro doit être gérée"):
+    with pytest.raises(ZeroDivisionError):
         divide(5, 0)
     
     # Tests de division entière avec des cas particuliers
