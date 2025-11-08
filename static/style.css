@@ -1,76 +1,123 @@
+/*
+ * Feuille de style principale de la calculatrice
+ *
+ * Ce fichier définit l'apparence visuelle de la calculatrice, incluant :
+ * - La mise en page responsive
+ * - Les couleurs et le thème
+ * - Les animations et transitions
+ * - Les états des boutons (hover, active)
+ */
+
+/* Configuration globale de la page */
 body {
+   /* Police de caractères moderne et lisible */
    font-family: Arial, sans-serif;
+   /* Fond clair pour un bon contraste */
    background-color: #f0f0f0;
+   /* Centrage vertical et horizontal de la calculatrice */
    display: flex;
    justify-content: center;
    align-items: center;
+   /* Utilisation de toute la hauteur de la fenêtre */
    height: 100vh;
+   /* Suppression des marges par défaut */
    margin: 0;
 }
 
+/* Conteneur principal de la calculatrice */
 .calculator {
+   /* Largeur responsive avec une limite maximale */
    width: 100%;
    max-width: 600px;
+   /* Thème sombre pour un look moderne */
    background-color: #333;
+   /* Espacement interne et arrondissement des coins */
    padding: 30px;
    border-radius: 15px;
+   /* Ombre portée pour effet de profondeur */
    box-shadow: 0px 0px 15px 0px #000;
+   /* Centrage du contenu */
    text-align: center;
 }
 
+/* Style du titre */
 h1 {
+   /* Contraste élevé pour la lisibilité */
    color: #fff;
+   /* Espacement sous le titre */
    margin-bottom: 20px;
+   /* Taille de police importante pour l'importance visuelle */
    font-size: 36px;
 }
 
+/* Zone d'affichage des calculs */
 #display {
+   /* Largeur totale avec hauteur fixe */
    width: 100%;
    height: 80px;
+   /* Police grande et lisible */
    font-size: 36px;
+   /* Alignement à droite comme une calculatrice standard */
    text-align: right;
+   /* Espacement interne et externe */
    padding: 15px;
    margin-bottom: 20px;
+   /* Style visuel cohérent avec le thème */
    border-radius: 10px;
    border: none;
    background-color: #222;
    color: #fff;
 }
 
+/* Grille de boutons */
 .buttons {
+   /* Utilisation de CSS Grid pour une disposition précise */
    display: grid;
+   /* 4 colonnes de taille égale */
    grid-template-columns: repeat(4, 1fr);
+   /* Espacement entre les boutons */
    gap: 15px;
 }
 
+/* Style des boutons de la calculatrice */
 .btn {
+   /* Dimensions et espacement */
    width: 100%;
    padding: 30px;
+   /* Style du texte */
    font-size: 24px;
+   /* Apparence du bouton */
    border: none;
    border-radius: 10px;
    background-color: #666;
    color: #fff;
+   /* Interaction utilisateur */
    cursor: pointer;
+   /* Animation douce au survol */
    transition: background-color 0.2s;
 }
 
+/* Effet de survol pour les boutons normaux */
 .btn:hover {
    background-color: #555;
 }
 
+/* Style spécifique pour les boutons d'opération */
 .operator {
    background-color: #ff9500;
 }
 
+/* Effet de survol pour les boutons d'opération */
 .operator:hover {
    background-color: #e68a00;
 }
 
+/* État actif des boutons normaux */
 .btn:active {
    background-color: #444;
 }
 
+/* État actif des boutons d'opération */
 .operator:active {
    background-color: #cc7a00;
 }

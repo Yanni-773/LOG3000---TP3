@@ -1,9 +1,23 @@
 <!DOCTYPE html>
+<!--
+    Template principal de la calculatrice.
+    
+    Ce fichier définit l'interface utilisateur de la calculatrice web.
+    Il inclut :
+    - Une grille de boutons numériques et d'opérateurs
+    - Un champ d'affichage pour les expressions et résultats
+    - Des fonctions JavaScript pour la manipulation de l'interface
+    
+    Dépendances:
+    - style.css pour la mise en forme
+    - JavaScript intégré pour la logique côté client
+-->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Flask Calculator</title>
+<!-- Importation des styles CSS -->
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -37,14 +51,27 @@
 </div>
 
 <script>
-   function appendToDisplay(value) {
-      const display = document.getElementById('display');
-      display.value += value;
-   }
+    /**
+     * Fonctions de manipulation de l'interface utilisateur
+     */
 
-   function clearDisplay() {
-      document.getElementById('display').value = '';
-   }
+    /**
+     * Ajoute une valeur au champ d'affichage de la calculatrice.
+     * 
+     * @param {string} value - La valeur à ajouter (chiffre ou opérateur)
+     */
+    function appendToDisplay(value) {
+        const display = document.getElementById('display');
+        display.value += value;
+    }
+
+    /**
+     * Efface le contenu du champ d'affichage.
+     * Cette fonction est appelée lorsque l'utilisateur appuie sur le bouton 'C'.
+     */
+    function clearDisplay() {
+        document.getElementById('display').value = '';
+    }
 </script>
 </body>
 </html>
