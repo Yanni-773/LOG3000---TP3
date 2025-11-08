@@ -92,7 +92,7 @@ def test_divide():
     assert divide(8, 3) == 2, "8 // 3 devrait donner 2 (partie entière)"
     
     # Test de division par zéro
-    with pytest.raises(ZeroDivisionError, message="La division par zéro devrait lever une exception"):
+    with pytest.raises(ZeroDivisionError):
         divide(5, 0)
 
 def test_ui_input_validation():
@@ -142,7 +142,7 @@ def test_edge_cases():
     assert multiply(0, 5) == 0, "Multiplication par zéro à gauche"
     
     # Tests de division par zéro
-    with pytest.raises(ZeroDivisionError, message="La division par zéro doit être gérée"):
+    with pytest.raises(ZeroDivisionError):
         divide(5, 0)
     
     # Tests de division entière avec des cas particuliers
