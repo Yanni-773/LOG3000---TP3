@@ -47,7 +47,7 @@ def multiply(a,b):
         b : Deuxième nombre
 
     Returns:
-        Le résultat de la multiplication
+        Le résultat de la multiplication (a * b)
         Si l'un des nombres est 0, retourne 0
 
     Examples:
