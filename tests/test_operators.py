@@ -92,7 +92,7 @@ def test_divide():
     assert divide(8, 3) == 2, "8 // 3 devrait donner 2 (partie entière)"
     
     # Test de division par zéro
-    with pytest.raises(ZeroDivisionError, message="La division par zéro devrait lever une exception"):
+    with pytest.raises(ZeroDivisionError):
         divide(5, 0)
 
 def test_ui_input_validation():
@@ -113,13 +113,13 @@ def test_ui_input_validation():
     assert calculate("  5  +  3  ") == 8, "Les espaces devraient être ignorés"
     
     # Tests des expressions invalides
-    with pytest.raises(ValueError, message="Les opérateurs doubles devraient être rejetés"):
+    with pytest.raises(ValueError):
         calculate("5++3")
     
-    with pytest.raises(ValueError, message="Les expressions incomplètes devraient être rejetées"):
+    with pytest.raises(ValueError):
         calculate("5+")
     
-    with pytest.raises(ValueError, message="Les expressions commençant par un opérateur devraient être rejetées"):
+    with pytest.raises(ValueError):
         calculate("+5")
 
 def test_edge_cases():
@@ -142,7 +142,7 @@ def test_edge_cases():
     assert multiply(0, 5) == 0, "Multiplication par zéro à gauche"
     
     # Tests de division par zéro
-    with pytest.raises(ZeroDivisionError, message="La division par zéro doit être gérée"):
+    with pytest.raises(ZeroDivisionError):
         divide(5, 0)
     
     # Tests de division entière avec des cas particuliers

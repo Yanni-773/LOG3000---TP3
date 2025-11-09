@@ -27,16 +27,16 @@ def subtract(a,b):
     Soustrait deux nombres.
 
     Args:
-        a : Premier nombre
-        b : Deuxième nombre
+        a : Premier nombre (le nombre duquel on soustrait)
+        b : Deuxième nombre (le nombre à soustraire)
 
     Returns:
-        Le résultat de la soustraction
+        Le résultat de la soustraction (a - b)
 
     Examples:
-        subtract(5, 3) = -2
+        subtract(5, 3) = 2
     """
-    return b - a
+    return a - b
 
 def multiply(a,b):
     """

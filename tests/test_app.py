@@ -72,7 +72,7 @@ def test_calculate_function():
     - Gestion des erreurs
     """
     assert calculate('2 + 3') == 5
-    assert calculate('10 - 5') == -5  # Note: l'ordre est inversé dans subtract
+    assert calculate('10 - 5') == 5
     
     # Test des erreurs
     with pytest.raises(ValueError):
